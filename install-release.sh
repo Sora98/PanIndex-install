@@ -75,7 +75,7 @@ EOF
 download_PanIndex(){
   mkdir -p "$WORKING_DIRECTORY"
 	local TARGET_FILE="${WORKING_DIRECTORY}/PanIndex.tar.gz"
-    DOWNLOAD_LINK="https://github.com/libsgh/PanIndex/releases/download/${RELEASE_LATEST_VERSION}/PanIndex-${RELEASE_LATEST_VERSION}-linux-${VDIS}.tar.gz"
+    DOWNLOAD_LINK="https://ghproxy.com/https://github.com/libsgh/PanIndex/releases/download/${RELEASE_LATEST_VERSION}/PanIndex-${RELEASE_LATEST_VERSION}-linux-${VDIS}.tar.gz"
     CEcho ${BLUE} "info: Downloading PanIndex: ${DOWNLOAD_LINK}"
     curl ${PROXY} -L -H "Cache-Control: no-cache" -o "${TARGET_FILE}" ${DOWNLOAD_LINK}
     if [ $? != 0 ];then
